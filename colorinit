@@ -1,6 +1,5 @@
 #!/bin/sh
 sleep 2s
-echo "yes > /etc/mythchan/flagfile
+echo "yes" > /etc/mythchan/flagfile
 echo "done"
 exit
-
