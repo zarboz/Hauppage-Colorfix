@@ -1,0 +1,8 @@
+#!/bin/ksh
+##edit the following line to match your chan change##
+/usr/bin/6200ch -n 0 $1
+##dont edit past this line ##
+colorinit
+exit
+
+

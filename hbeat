@@ -1,0 +1,16 @@
+#!/bin/bash
+
+FLAG="yes"
+RESULT=`cat /etc/mythchan/flagfile | grep -o yes`
+
+while [ true ]; do
+   if [ "$RESULT" == "$FLAG" ]; then
+      sleep 4s
+      echo "colorfix is running"
+      /etc/mythchan/colorfix.sh 
+      echo "no" > /etc/mythchan/flagfile
+   else
+      RESULT=`cat /etc/mythchan/flagfile | grep -o yes`
+   fi
+   RESULT=`cat /etc/mythchan/flagfile | grep -o yes`
+done
